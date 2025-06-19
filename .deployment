@@ -1,0 +1,2 @@
+[config]
+SCM_DO_BUILD_DURING_DEPLOYMENT=false  # 배포할때 빌드를 할거냐 (안할거임)
