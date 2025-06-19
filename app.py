@@ -55,7 +55,7 @@ extract_prompt = ChatPromptTemplate.from_messages([
 extract_chain = extract_prompt | llm | JsonOutputParser()
 
 # ====================================
-# 쿼리 생성 함수
+# 쿼리 생성 함수 : 추후 Elasticsearch 연결 시 활용 예정
 # ====================================
 def build_metric_query(params: dict) -> dict:
     timerange = params.get("timerange", "1h")
