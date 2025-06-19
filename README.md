@@ -1,3 +1,6 @@
+# 0. **서비스 접속 주소**
+https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
+
 # 1. **개요 및 목적**
 
 ### 1) 현재 모니터링 환경 개요
