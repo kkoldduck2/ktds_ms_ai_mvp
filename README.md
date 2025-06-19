@@ -74,7 +74,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 | **LLM (Azure GPT-4o-mini)** | 사용자 질문을 이해하고 툴 호출 흐름을 제어 |
 | **LangChain Tool** | 메트릭, 로그, APM, RAG 등 기능별 도구 정의 |
 | **StateGraph (LangGraph)** | 도구 호출 → 모델 응답 → 종합 판단 흐름을 제어 |
-| **Azure Cognitive Search** | 과거 장애 리포트 검색 (RAG) 수행 |
+| **Azure AI Search** | 과거 장애 리포트 검색 (RAG) 수행 |
 | **Streamlit** | 사용자가 인터랙션할 수 있는 웹 인터페이스 제공 |
 
 ### 3) 전체 동작 흐름
