@@ -14,7 +14,11 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 - 운영자는 Kibana를 통해 직접 로그를 조회하거나,
     
     **Kibana 사용에 익숙하지 않은 사용자**를 위해 별도로 개발된 UI인 **NEONE**을 통해 모니터링을 진행합니다.
-    
+
+![Image](https://github.com/user-attachments/assets/a4eb6876-0386-4c5b-aa36-7c272b3270b3)
+
+![Image](https://github.com/user-attachments/assets/6da01dc0-382c-482f-919e-6fc12f4bfbfd)
+
 
 ### 2) 기존 시스템의 한계
 
