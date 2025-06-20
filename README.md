@@ -61,15 +61,8 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 - *도구(tool)**를 호출해 **메트릭 / 이벤트 / APM / 유사사례(RAG)** 를 조회함
 - 결과를 **Streamlit UI**에 자연어로 응답
 
-```
-[ 사용자 입력 ]
-      ↓
-[ LLM (GPT-4o-mini) + 툴 선택 ]
-      ↓
-[ Elasticsearch 기반 메트릭/로그/APM + RAG ]
-      ↓
-[ 종합 응답 생성 → 사용자 출력 ]
-```
+![image](https://github.com/user-attachments/assets/58e264cc-dbc3-4e4b-87e3-d45100c13b71)
+
 
 ### 2) 핵심 구성 요소
 
