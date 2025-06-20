@@ -18,7 +18,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 ![Image](https://github.com/user-attachments/assets/6da01dc0-382c-482f-919e-6fc12f4bfbfd)
 
 
-### 2) 기존 시스템의 한계
+### 2) 현재 시스템의 보완 지점
 
 1. **Kibana에서 원하는 정보를 찾기 어렵다**
     - NEONE에서 주요 지표는 확인할 수 있지만,
