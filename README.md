@@ -88,7 +88,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
     - 예) "node-a CPU가 높아" → `{object_type: "node", object_name: "node-a", metric: "cpu"}`
 3. **도구(Tool) 자동 선택 및 실행**
     - `metric_search`, `apm_search`, `event_search`, `retrieve_rag`, `list_services_on_node` 등
-    - retrieve_rag를 제외한 다른 모든 tool은 ES 쿼리를 생성하여 조회하는 함수
+    -  `retrieve_rag`를 제외한 다른 모든 tool은 ES 쿼리를 생성하여 조회하는 함수
     - 각 데이터 타입별로 바라보는 인덱스, 쿼리 방식이 다를거라 생각해서 별도 tool로 만들어서
     - 운영자의 질문 의도에 따라 적절한 함수를 호출하도록 함
     - 툴 호출 결과는 LLM에 다시 전달됨
