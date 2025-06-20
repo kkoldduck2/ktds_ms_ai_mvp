@@ -92,7 +92,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 **3. 선택된 도구 실행 시, 내부에서 파라미터 추출**
 
-- 각 Tool 내부에서 `extract_chain`을 통해 필요한 정보를 파싱
+- 각 Tool 내부에서 `extract_chain`을 통해 필요한 파라미터 추출
 - 예: `"node-a의 디스크 사용량이 높은 것 같아"` →
     
     `{"object_type": "node", "object_name": "node-a", "metric": "disk"}`
