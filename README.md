@@ -76,6 +76,8 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 | **Streamlit** | 사용자가 인터랙션할 수 있는 웹 인터페이스 제공 |
 
 ### 3) 전체 동작 흐름
+![image](https://github.com/user-attachments/assets/987986b6-c3cc-4d0d-84e7-95561d8b8fd4)
+
 
 **1. 사용자 질문 입력**
 
