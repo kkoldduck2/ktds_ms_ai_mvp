@@ -43,7 +43,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 - 이렇게 조회된 결과는 다시 LLM으로 전달되고,
 - **LLM은 이를 종합하여 자연어 형태로 Streamlit UI에 응답합니다.**
 
-![image](https://github.com/user-attachments/assets/58e264cc-dbc3-4e4b-87e3-d45100c13b71)
+![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
 
 
 ### 2) 핵심 구성 요소
