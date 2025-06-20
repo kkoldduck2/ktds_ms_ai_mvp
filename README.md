@@ -4,6 +4,8 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 # 1. **개요 및 목적**
 
 ### 1) 현재 모니터링 시스템 개요
+![image](https://github.com/user-attachments/assets/71fe18e5-ca6e-469f-8341-5699aff9daf7)
+
 
 - 현재 **ICIS Tr 모니터링 시스템**에서는
     
