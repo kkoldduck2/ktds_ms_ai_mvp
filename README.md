@@ -1,5 +1,5 @@
 
-# 1. **개요 및 목적**
+# 1. **프로젝트 배경**
 
 ### 1) 현재 모니터링 시스템 개요
 ![image](https://github.com/user-attachments/assets/71fe18e5-ca6e-469f-8341-5699aff9daf7)
