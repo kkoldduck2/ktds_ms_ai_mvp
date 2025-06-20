@@ -1,7 +1,7 @@
 # RAG 기반 이상징후 탐지 및 장애 대응 지원 시스템
 
 
-# 1. **프로젝트 배경**
+## 1. **프로젝트 배경**
 
 ### 1) 현재 모니터링 시스템 개요
 ![image](https://github.com/user-attachments/assets/71fe18e5-ca6e-469f-8341-5699aff9daf7)
@@ -33,7 +33,7 @@
 - **AI 기반 분석 도우미**로 **문제 진단 속도 획기적 개선**
     
 
-# 2. 시스템 아키텍처 및 코드 구성
+## 2. 시스템 아키텍처 및 코드 구성
 
 ### 1) 주요 기능과 아키텍처 개요
 ![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
@@ -89,11 +89,11 @@
 
 
 
-# 3. 시연
+## 3. 시연
 https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 
-# 4. 향후 개발 계획
+## 4. 향후 개발 계획
 - **Elasticsearch 연동 쿼리 생성 기능 구현**
     - **현재 상태**: 사전 정의된 mock 데이터 기반 동작
     - **개발 목표**: 사용자 질의를 바탕으로 **실제 Elasticsearch 쿼리를 동적으로 생성**하고 실행
