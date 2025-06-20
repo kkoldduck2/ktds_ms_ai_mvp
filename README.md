@@ -1,5 +1,3 @@
-# 0. **서비스 접속 주소**
-https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 # 1. **개요 및 목적**
 
@@ -93,8 +91,11 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 - LLM이 모든 툴 응답을 종합해 사용자에게 최종 답변을 반환
 
+# 3. 시연
+https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
-# 3. 향후 개발 계획
+
+# 4. 향후 개발 계획
 - **Elasticsearch 연동 쿼리 생성 기능 구현**
     - **현재 상태**: 사전 정의된 mock 데이터 기반 동작
     - **개발 목표**: 사용자 질의를 바탕으로 **실제 Elasticsearch 쿼리를 동적으로 생성**하고 실행
