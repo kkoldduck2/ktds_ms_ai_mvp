@@ -95,10 +95,47 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 
 # 3. 향후 개발 계획
-
 - **Elasticsearch 연동 쿼리 생성 기능 구현**
     - **현재 상태**: 사전 정의된 mock 데이터 기반 동작
     - **개발 목표**: 사용자 질의를 바탕으로 **실제 Elasticsearch 쿼리를 동적으로 생성**하고 실행
+    - **구현 방향**:
+        
+        ```python
+        def build_metric_query(params: dict) -> dict:
+            timerange = params.get("timerange", "1h")
+            return {
+                "index": "k8s-metric-*",
+                "size": 100,
+                "query": {
+                    "bool": {
+                        "must": [
+                            {"term": {"node.name.keyword": params["object_name"]}},
+                            {"range": {"@timestamp": {"gte": f"now-{timerange}"}}}
+                        ]
+                    }
+                },
+                "sort": [{"@timestamp": {"order": "desc"}}]
+            }
+        
+        def build_apm_query(params: dict) -> dict:
+            timerange = params.get("timerange", "1h")
+            return {
+                "index": "apm-*",
+                "size": 0,
+                "query": {
+                    "bool": {
+                        "must": [
+                            {"term": {"service.name.keyword": params["object_name"]}},
+                            {"range": {"@timestamp": {"gte": f"now-{timerange}"}}}
+                        ]
+                    }
+                },
+                "aggs": {
+                    "avg_latency": {"avg": {"field": "transaction.duration.us"}},
+                    "error_rate": {"filter": {"term": {"event.outcome": "failure"}}}
+                }
+            }
+        ```
         
 - **장애 보고서 RAG 체계 고도화**
     - **현재 상태**: 기본적인 RAG 구조 구현
