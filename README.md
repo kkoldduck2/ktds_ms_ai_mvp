@@ -5,7 +5,7 @@
 ![image](https://github.com/user-attachments/assets/71fe18e5-ca6e-469f-8341-5699aff9daf7)
 
 - 쿠버네티스 환경에서 발생하는 **메트릭, 이벤트, 로그, APM 데이터**가 **Elasticsearch에 중앙 집중 저장**
-- 운영자는 **Kibana** 또는 자체 개발 UI **NEONE**을 통해 모니터링 수행
+- 운영자는 **Kibana** 또는 자체 개발 UI를 통해 모니터링 수행
 
 ![Image](https://github.com/user-attachments/assets/6da01dc0-382c-482f-919e-6fc12f4bfbfd)
 
@@ -141,7 +141,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
         - 다양한 실 사례 수집 및 **벡터 데이터베이스 고도화**
         - 검색 정확도 향상을 위한 **임베딩 모델 최적화**
           
-- **UI 개선을 통한 데이터 시각화 기능 추가 -> NEONE 통합**
+- **UI 개선을 통한 데이터 시각화 기능 추가 -> 자체 개발 UI에 통합**
     - **시계열 데이터** → 라인 차트, 영역 차트
     - **APM 데이터** → 응답시간 분포, 에러율 트렌드
     - **메트릭 비교** → 바 차트, 히트맵
