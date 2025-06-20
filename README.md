@@ -81,21 +81,37 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 ### 3) 전체 동작 흐름
 
-1. **사용자 질문 입력**
-    - Streamlit `st.chat_input`을 통해 자연어 질문 수집
-2. **LLM 프롬프트 기반 정보 추출**
-    - `extract_chain`: object_type, metric, timerange 등 추출
-    - 예) "node-a CPU가 높아" → `{object_type: "node", object_name: "node-a", metric: "cpu"}`
-3. **도구(Tool) 자동 선택 및 실행**
-    - `metric_search`, `apm_search`, `event_search`, `retrieve_rag`, `list_services_on_node` 등
-    -  `retrieve_rag`를 제외한 다른 모든 tool은 ES 쿼리를 생성하여 조회하는 함수
-    - 각 데이터 타입별로 바라보는 인덱스, 쿼리 방식이 다를거라 생각해서 별도 tool로 만들어서
-    - 운영자의 질문 의도에 따라 적절한 함수를 호출하도록 함
-    - 툴 호출 결과는 LLM에 다시 전달됨
-4. **필요 시 반복 분석**
-    - `StateGraph` 내 조건 분기(continue or END)를 통해 다음 단계 판단
-5. **최종 분석 결과 반환**
-    - LLM이 이전 툴 호출 결과들을 종합하여 자연어 응답 생성
+**1. 사용자 질문 입력**
+
+- Streamlit `st.chat_input`을 통해 자연어 질문 수집
+
+**2. 모델이 적절한 도구(Tool)를 선택**
+
+- LLM은 SystemMessage의 지시를 기반으로 `metric_search`, `apm_search`, `event_search`, `retrieve_rag` 등 중에서 필요한 도구를 자동 선택
+- 질문 의도에 따라 도구를 **하나 또는 여러 개 순차 호출**
+
+**3. 선택된 도구 실행 시, 내부에서 파라미터 추출**
+
+- 각 Tool 내부에서 `extract_chain`을 통해 필요한 정보를 파싱
+- 예: `"node-a의 디스크 사용량이 높은 것 같아"` →
+    
+    `{"object_type": "node", "object_name": "node-a", "metric": "disk"}`
+    
+
+**4. 데이터 조회 및 분석 결과 반환**
+
+- 실제 쿼리는 샘플 데이터 혹은 Elasticsearch 연동 후 이뤄짐
+- Tool의 응답은 다시 LLM에 전달됨
+
+**5. 필요시 반복 분석 수행**
+
+- LangGraph의 `StateGraph` 조건 분기를 통해 툴을 추가 호출하거나 종료 결정
+- ex) `metric_search` → 결과 보고 `retrieve_rag` 호출
+
+**6. 최종 자연어 응답 생성**
+
+- LLM이 모든 툴 응답을 종합해 사용자에게 최종 답변을 반환
+
 
 ### 4) LangGraph 흐름 구조
 
