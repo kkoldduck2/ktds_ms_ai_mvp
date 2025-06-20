@@ -1,0 +1,16 @@
+occurrence_time,vectorized_content
+2024-12-01 14:32,"Issue Summary: CPU 사용률이 85% 초과, 디스크 사용률이 90% 도달. Root Cause: 디스크 부족 및 파드 과부하. Resolution Steps: 디스크 정리 및 불필요한 파드 재배포. Resolution Outcome: 시스템 정상화."
+2025-01-15 9:20,Issue Summary: 메모리 누수로 파드 재시작 반복. Root Cause: 서비스 메모리 관리 이슈. Resolution Steps: 메모리 리밋 상향 조정 및 코드 수정. Resolution Outcome: 장애 해결 및 모니터링 강화.
+2025-03-05 18:05,Issue Summary: 네트워크 지연이 100ms 이상 지속. Root Cause: 스위치 오류. Resolution Steps: 네트워크 스위치 재시작. Resolution Outcome: 안정화됨.
+2025-04-10 3:15,Issue Summary: 파드가 CrashLoopBackOff 상태에 빠짐. Root Cause: 환경변수 누락으로 초기화 실패. Resolution Steps: 환경변수 수정 후 파드 재배포. Resolution Outcome: 서비스 정상 복구.
+2025-05-02 13:45,"Issue Summary: API 응답 지연 증가 (P95 1500ms). Root Cause: DB 커넥션 풀 부족. Resolution Steps: DB 커넥션 풀 확장, 쿼리 튜닝. Resolution Outcome: 응답속도 정상화."
+2025-05-18 11:10,Issue Summary: 파드가 OOMKilled 발생. Root Cause: 캐시 데이터 과다적재. Resolution Steps: 캐시 정책 수정 및 메모리 리밋 상향. Resolution Outcome: 장애 재발 없음.
+2025-06-03 2:50,Issue Summary: 노드가 NotReady 상태로 전환. Root Cause: 디스크 I/O 장애. Resolution Steps: 노드 재부팅 및 디스크 교체. Resolution Outcome: 정상 운영 복귀.
+2025-06-20 20:20,Issue Summary: 인증 서버 장애로 전체 로그인 실패. Root Cause: Redis 세션 만료 정책 오류. Resolution Steps: Redis 설정 수정 및 재기동. Resolution Outcome: 정상 서비스 복구.
+2025-07-01 16:00,Issue Summary: 로그 적재 지연 발생. Root Cause: ElasticSearch 인덱스 샤드 과부하. Resolution Steps: 인덱스 리밸런싱 및 샤드 수 조정. Resolution Outcome: 로그 처리 정상화.
+2025-07-15 7:30,Issue Summary: APM 지표 수집 누락. Root Cause: OpenTelemetry Collector 설정 오류. Resolution Steps: Collector 설정 수정 및 배포. Resolution Outcome: 모니터링 정상화.
+2025-06-18T23:44:41.007630,2025-06-19 node-a 노드의 CPU 사용률이 92%까지 급등하고 메모리도 81% 이상 사용되어 파드 스케줄이 지연됨. 디스크 사용률도 89%로 높아 노드 자원 과부하가 발생.
+2025-06-19T00:44:41.007630,2025-06-19 data-pvc PVC가 바인딩에 실패. StorageClass 'standard'에 연결 가능한 PersistentVolume이 없어 신규 파드가 Pending 상태로 대기함.
+2025-06-19T01:44:41.007630,2025-06-19 service-a-pod-123 파드에서 메모리 사용률이 95%를 넘어서면서 OOMKilled 이벤트 발생. 파드가 재시작을 반복하며 CrashLoopBackOff 상태에 빠짐.
+2025-06-19T02:44:41.007630,"2025-06-19 checkout-service의 평균 응답 속도가 1.2초까지 증가하고, 에러율도 4.8%로 상승. Redis 캐시 미스율 증가가 주요 원인으로 추정됨."
+2025-06-19T03:44:41.007630,"2025-06-19 payment-api의 평균 응답 시간이 1.3초로 급증하고, 에러율은 6.7%까지 상승. 외부 결제 시스템 지연으로 인해 전체 처리량 감소 현상 발생."
