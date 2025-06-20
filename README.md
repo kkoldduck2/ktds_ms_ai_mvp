@@ -56,10 +56,11 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 ### 1) 주요 기능과 아키텍처 개요
 
-- **사용자 질문**을 입력하면,
-- **LLM**이 질문을 이해하고 필요한 정보를 추출한 뒤,
-- *도구(tool)**를 호출해 **메트릭 / 이벤트 / APM / 유사사례(RAG)** 를 조회함
-- 결과를 **Streamlit UI**에 자연어로 응답
+- 사용자가 질문을 입력하면,
+- **LLM이 질문의 의도를 파악하여 적절한 도구(tool)를 선택**하고,
+- **선택된 도구 내부에서 파라미터를 추출**해 메트릭 / 이벤트 / APM / 유사사례(RAG)를 조회합니다.
+- 이렇게 조회된 결과는 다시 LLM으로 전달되고,
+- **LLM은 이를 종합하여 자연어 형태로 Streamlit UI에 응답합니다.**
 
 ![image](https://github.com/user-attachments/assets/58e264cc-dbc3-4e4b-87e3-d45100c13b71)
 
