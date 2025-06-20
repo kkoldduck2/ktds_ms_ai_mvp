@@ -57,7 +57,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 ### 1) 주요 기능과 아키텍처 개요
 
 - **사용자 질문**을 입력하면,
-- **LangChain 기반 LLM**이 질문을 이해하고 필요한 정보를 추출한 뒤,
+- **LLM**이 질문을 이해하고 필요한 정보를 추출한 뒤,
 - *도구(tool)**를 호출해 **메트릭 / 이벤트 / APM / 유사사례(RAG)** 를 조회함
 - 결과를 **Streamlit UI**에 자연어로 응답
 
