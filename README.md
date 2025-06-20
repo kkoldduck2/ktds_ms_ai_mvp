@@ -26,7 +26,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
     - 과거 해결 방안을 **체계적으로 추적하고 활용하기 어려운 구조**
         
 
-### 3) 서비스 도입의 필요성
+### 3) 기대효과
 
 - **자연어 질문** → **Elasticsearch 쿼리 자동 생성** → **즉시 결과 제공**
 - **RAG 기반 과거 사례 검색**으로 유사 장애 해결 방안 제시
