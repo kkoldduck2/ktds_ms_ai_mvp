@@ -111,22 +111,6 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 - LLM이 모든 툴 응답을 종합해 사용자에게 최종 답변을 반환
 
 
-### 4) LangGraph 흐름 구조
-
-```python
-graph = StateGraph(AgentState)
-
-graph.add_node("agent", call_model)     # LLM 판단
-graph.add_node("tools", tool_node)      # 툴 실행
-
-graph.set_entry_point("agent")
-graph.add_conditional_edges("agent", should_continue, ["tools", END])
-graph.add_edge("tools", "agent")
-graph.compile()
-```
-
-- LangGraph를 사용해 **“모델 호출 → 툴 실행 → 판단 반복”** 구조를 설계
-
 # 3. 향후 개발 계획
 
 - **Elasticsearch 연동 쿼리 생성 기능 구현**
