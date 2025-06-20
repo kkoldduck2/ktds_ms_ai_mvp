@@ -97,9 +97,27 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 # 3. 향후 개발 계획
 
 - **Elasticsearch 연동 쿼리 생성 기능 구현**
-    
-    현재는 사전 정의된 mock 데이터를 기반으로 동작하고 있으며, 향후에는 사용자 질의를 바탕으로 **실제 Elasticsearch 쿼리를 동적으로 생성**하고 실행할 수 있도록 기능을 확장할 예정입니다.
-    
+    - **현재 상태**: 사전 정의된 mock 데이터 기반 동작
+    - **개발 목표**: 사용자 질의를 바탕으로 **실제 Elasticsearch 쿼리를 동적으로 생성**하고 실행
+    - **구현 방향**:
+        
+        ```python
+        def generate_es_query(extracted_info):
+            query_builder = ElasticsearchQueryBuilder()
+        
+            if extracted_info.get("object_type") == "node":
+                query_builder.add_filter("kubernetes.node.name", extracted_info["object_name"])
+        
+            if extracted_info.get("metric") == "cpu":
+                query_builder.add_aggregation("avg", "system.cpu.user.pct")
+        
+            return query_builder.build()
+        
+        ```
+        
 - **장애 보고서 RAG 체계 고도화**
-    
-    유사 장애 검색을 위한 RAG 시스템의 정확도를 높이기 위해, **정형화된 장애 보고서 작성 포맷**을 마련하고, 다양한 실 사례를 수집하여 벡터 데이터베이스를 고도화할 계획입니다.
+    - **현재 상태**: 기본적인 RAG 구조 구현
+    - **개발 목표**:
+        - **정형화된 장애 보고서 작성 포맷** 마련
+        - 다양한 실 사례 수집 및 **벡터 데이터베이스 고도화**
+        - 검색 정확도 향상을 위한 **임베딩 모델 최적화**
