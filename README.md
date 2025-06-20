@@ -6,16 +6,8 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 ### 1) 현재 모니터링 시스템 개요
 ![image](https://github.com/user-attachments/assets/71fe18e5-ca6e-469f-8341-5699aff9daf7)
 
-
-- 현재 **ICIS Tr 모니터링 시스템**에서는
-    
-    쿠버네티스 환경에서 발생하는 **메트릭, 이벤트, 로그, APM 데이터**가
-    
-    모두 **Elasticsearch에 중앙 집중 방식으로 저장**되고 있습니다.
-    
-- 운영자는 Kibana를 통해 직접 로그를 조회하거나,
-    
-    **Kibana 사용에 익숙하지 않은 사용자**를 위해 별도로 개발된 UI인 **NEONE**을 통해 모니터링을 진행합니다.
+- 쿠버네티스 환경에서 발생하는 **메트릭, 이벤트, 로그, APM 데이터**가 **Elasticsearch에 중앙 집중 저장**
+- 운영자는 **Kibana** 또는 자체 개발 UI **NEONE**을 통해 모니터링 수행
 
 ![Image](https://github.com/user-attachments/assets/6da01dc0-382c-482f-919e-6fc12f4bfbfd)
 
