@@ -34,6 +34,7 @@
 # 2. 시스템 아키텍처 및 코드 구성
 
 ### 1) 주요 기능과 아키텍처 개요
+![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
 
 **1. 사용자 질문 입력**
 
@@ -66,7 +67,7 @@
 
 - LLM이 모든 툴 응답을 종합해 사용자에게 최종 답변을 반환
 
-![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
+
 
 
 ### 2) 핵심 구성 요소
