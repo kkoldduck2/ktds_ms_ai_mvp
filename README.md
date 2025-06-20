@@ -35,32 +35,6 @@
 
 ### 1) 주요 기능과 아키텍처 개요
 
-- 사용자가 질문을 입력하면,
-- **LLM이 질문의 의도를 파악하여 적절한 도구(tool)를 선택**하고,
-- **선택된 도구 내부에서 파라미터를 추출**해 메트릭 / 이벤트 / APM / 유사사례(RAG)를 조회합니다.
-- 이렇게 조회된 결과는 다시 LLM으로 전달되고,
-- LangGraph의 StateGraph 조건 분기를 통해 툴을 추가 호출하거나 종료 결정
-- **LLM은 이를 종합하여 자연어 형태로 Streamlit UI에 응답합니다.**
-
-![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
-
-
-### 2) 핵심 구성 요소
-
-| 구성 요소 | 역할 및 기능 |
-| --- | --- |
-| **LLM (Azure GPT-4o-mini)** | 사용자 질문을 이해하고 툴 호출 흐름을 제어 |
-| **LangChain Tool** | 메트릭, 로그, APM, RAG 등 기능별 도구 정의 |
-| **StateGraph (LangGraph)** | 도구 호출 → 모델 응답 → 종합 판단 흐름을 제어 |
-| **Azure AI Search** | 과거 장애 리포트 검색 (RAG) 수행 |
-| **Streamlit** | 사용자가 인터랙션할 수 있는 웹 인터페이스 제공 |
-| **Elasticsearch** | 메트릭, 로그, APM 데이터의 실시간 검색 및 분석 엔진 |
-
-
-### 3) 전체 동작 흐름
-![image](https://github.com/user-attachments/assets/987986b6-c3cc-4d0d-84e7-95561d8b8fd4)
-
-
 **1. 사용자 질문 입력**
 
 - Streamlit `st.chat_input`을 통해 자연어 질문 수집
@@ -91,6 +65,26 @@
 **6. 최종 자연어 응답 생성**
 
 - LLM이 모든 툴 응답을 종합해 사용자에게 최종 답변을 반환
+
+![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
+
+
+### 2) 핵심 구성 요소
+
+| 구성 요소 | 역할 및 기능 |
+| --- | --- |
+| **LLM (Azure GPT-4o-mini)** | 사용자 질문을 이해하고 툴 호출 흐름을 제어 |
+| **LangChain Tool** | 메트릭, 로그, APM, RAG 등 기능별 도구 정의 |
+| **StateGraph (LangGraph)** | 도구 호출 → 모델 응답 → 종합 판단 흐름을 제어 |
+| **Azure AI Search** | 과거 장애 리포트 검색 (RAG) 수행 |
+| **Streamlit** | 사용자가 인터랙션할 수 있는 웹 인터페이스 제공 |
+| **Elasticsearch** | 메트릭, 로그, APM 데이터의 실시간 검색 및 분석 엔진 |
+
+
+### 3) 전체 동작 흐름
+![image](https://github.com/user-attachments/assets/987986b6-c3cc-4d0d-84e7-95561d8b8fd4)
+
+
 
 # 3. 시연
 https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
