@@ -3,7 +3,7 @@ https://sjkim0831-gcfad7f9a5ahh6fh.swedencentral-01.azurewebsites.net/
 
 # 1. **개요 및 목적**
 
-### 1) 현재 모니터링 환경 개요
+### 1) 현재 모니터링 시스템 개요
 
 - 현재 **ICIS Tr 모니터링 시스템**에서는
     
