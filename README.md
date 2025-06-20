@@ -39,6 +39,7 @@
 - **LLM이 질문의 의도를 파악하여 적절한 도구(tool)를 선택**하고,
 - **선택된 도구 내부에서 파라미터를 추출**해 메트릭 / 이벤트 / APM / 유사사례(RAG)를 조회합니다.
 - 이렇게 조회된 결과는 다시 LLM으로 전달되고,
+- LangGraph의 StateGraph 조건 분기를 통해 툴을 추가 호출하거나 종료 결정
 - **LLM은 이를 종합하여 자연어 형태로 Streamlit UI에 응답합니다.**
 
 ![image](https://github.com/user-attachments/assets/df89aac7-a940-4cab-a3e3-3b06cd84a584)
